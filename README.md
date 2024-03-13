@@ -1,1 +1,1 @@
-# django-auth-project
+## Get started with our Login form in Django
