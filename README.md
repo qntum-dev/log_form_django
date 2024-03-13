@@ -1,1 +1,1 @@
-# log_form_django
+# django-auth-project
