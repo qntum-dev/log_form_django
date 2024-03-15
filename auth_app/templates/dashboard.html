@@ -1,9 +1,45 @@
-{% extends 'layouts/app.html' %}
+{% extends 'layouts/app.html' %} {% block content %}
+<style>
+  body {
+    background-color: rgb(147, 181, 233);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Open Sans", sans-serif;
+  }
+    /* Style the card header */
+    .card-header {
+    background-color: #f8f9fa; /* Set header background color */
+    border-bottom: 1px solid #dee2e6; /* Add border to separate header */
+    /* padding: 10px 0; Add some padding */
+  }
+</style>
+<div class="row justify-content-center align-items-center vh-100">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-header">
+          <h2 class="card-title text-center">
+            Welcome, {{ request.user.username }}!
+          </h2>
+        </div>
 
-{% block content %}
-
-<h1>Hello {{ request.user.username }} welcome to the world!</h1>
-<a href="{% url 'logout' %}" class="btn btn-dark">Logout</a>
-
+        In the coding world, algorithms are the architects, meticulously
+        crafting solutions from the chaos of data. Variables are the messengers,
+        carrying information across the digital landscape. Loops are the
+        journey, guiding us through iterations towards efficiency and clarity.
+        Functions are the tools, modularizing our code for reusability and
+        scalability. Bugs are the puzzles, challenging us to think critically
+        and problem-solve with precision. Syntax is the language, shaping our
+        ideas into executable commands. Collaboration is the synergy, fueling
+        innovation and fostering growth. In this world of code, every line is a
+        story waiting to be told, every project a journey waiting to unfold.
+      </div>
+      <div class="card-footer text-center">
+        <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
